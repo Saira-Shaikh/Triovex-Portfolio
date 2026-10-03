@@ -26,7 +26,7 @@ const About = () => (
         <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto"></div>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-12 items-start pr-2">
+      <div className="grid lg:grid-cols-2 gap-12 items-start">
         <div className="space-y-6">
           <div className="mb-4">
             <h2 className="text-4xl md:text-3xl font-bold text-white mb-4">
