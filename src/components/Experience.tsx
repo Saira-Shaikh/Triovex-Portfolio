@@ -132,7 +132,7 @@ const Experience = () => {
         {/* Experience Timeline */}
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 to-cyan-400 transform md:-translate-x-1/2"></div>
+          <div className="absolute  left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 to-cyan-400 transform md:-translate-x-1/2"></div>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -140,7 +140,7 @@ const Experience = () => {
                 key={index}
                 className={`relative flex items-center ${
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                } flex-col md:flex-row`}
+                } flex-col md:flex-row px-6`}
               >
                 {/* Timeline Dot */}
                 <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-blue-400 rounded-full transform -translate-x-1/2 md:translate-x-0 border-4 border-gray-900 z-10 shadow-lg shadow-blue-400/30"></div>

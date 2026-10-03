@@ -2,7 +2,7 @@ import { Button } from "../components/ui/button";
 
 const Hero = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen min-w-screen">
       <section
         id="home"
         className="min-h-screen flex items-center justify-center relative overflow-hidden "

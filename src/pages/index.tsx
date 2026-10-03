@@ -10,7 +10,7 @@ import WhyWorkWithUs from "../components/WhyWorkWithUs";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-700 via-slate-950 to-slate-700">
+    <div className="min-h-screen overflow-x-clip bg-gradient-to-br from-slate-700 via-slate-950 to-slate-700">
       <Navigation />
       <Hero />
       <About />
