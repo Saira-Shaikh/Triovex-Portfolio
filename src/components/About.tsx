@@ -9,7 +9,13 @@ import {
   Smartphone,
   Target,
 } from "lucide-react";
-
+const approachSteps = [
+  { icon: Lightbulb, title: "Understand" },
+  { icon: Palette, title: "Design" },
+  { icon: Code2, title: "Develop" },
+  { icon: TestTube2, title: "Test" },
+  { icon: RefreshCw, title: "Refine" },
+];
 const About = () => (
   <section id="about" className="py-20 relative">
     <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,7 +26,7 @@ const About = () => (
         <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto"></div>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-12 items-start">
+      <div className="grid lg:grid-cols-2 gap-12 items-start pr-2">
         <div className="space-y-6">
           <div className="mb-4">
             <h2 className="text-4xl md:text-3xl font-bold text-white mb-4">
@@ -69,31 +75,30 @@ const About = () => (
           <div className="w-40 h-1 bg-gradient-to-r from-blue-400 to-cyan-400"></div>
           {/* Approach */}
           <div className="py-6">
-            <div className="flex items-center justify-between gap-2">
-              {[
-                { icon: Lightbulb, title: "Understand" },
-                { icon: Palette, title: "Design" },
-                { icon: Code2, title: "Develop" },
-                { icon: TestTube2, title: "Test" },
-                { icon: RefreshCw, title: "Refine" },
-              ].map((step, index, steps) => {
+            <div className="relative flex flex-col gap-6 sm:grid sm:grid-cols-5 sm:gap-0">
+              {/* connector: vertical on phones, horizontal from sm up */}
+              <div
+                aria-hidden
+                className="absolute left-[22px] top-[22px] bottom-[22px] w-1 -translate-x-1/2 bg-gradient-to-b from-blue-400/60 to-cyan-400/30 sm:hidden"
+              />
+              <div
+                aria-hidden
+                className="absolute left-[10%] right-[10%] top-[22px] h-1 -translate-y-1/2 bg-gradient-to-r from-blue-400/60 to-cyan-400/30 hidden sm:block"
+              />
+
+              {approachSteps.map((step) => {
                 const Icon = step.icon;
-
                 return (
-                  <div key={step.title} className="flex items-center flex-1">
-                    <div className="flex flex-col items-center text-center min-w-fit">
-                      <div className="w-11 h-11 rounded-full bg-[#0b1220] border border-blue-400/40 flex items-center justify-center">
-                        <Icon className="w-5 h-5 text-blue-400" />
-                      </div>
-
-                      <h3 className="mt-3 text-sm font-semibold text-white">
-                        {step.title}
-                      </h3>
+                  <div
+                    key={step.title}
+                    className="relative flex items-center gap-4 sm:flex-col sm:gap-3 sm:text-center"
+                  >
+                    <div className="w-11 h-11 shrink-0 rounded-full bg-[#0b1220] border border-blue-400/40 flex items-center justify-center">
+                      <Icon className="w-5 h-5 text-blue-400" />
                     </div>
-
-                    {index < steps.length - 1 && (
-                      <div className="h-2 mb-4 bg-gradient-to-r from-blue-400/60 to-cyan-400/30 flex-1 mx-3" />
-                    )}
+                    <h3 className="text-sm font-semibold text-white">
+                      {step.title}
+                    </h3>
                   </div>
                 );
               })}

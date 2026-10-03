@@ -32,7 +32,7 @@ const teamMembers = [
     accent: "from-purple-400 to-pink-400",
   },
   {
-    name: "Abdullah Bin Musharraf",
+    name: "Abdullah Musharraf",
     role: "Software Engineer — Backend",
 
     description:
